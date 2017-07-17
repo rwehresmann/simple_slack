@@ -1,7 +1,7 @@
 FactoryGirl.define do
  factory :channel do
    slug "channel"
-   team dependent: :destroy
+   team 
    user { team.user }
  end
 end
