@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   root to: 'teams#index'
 
   resources :teams, only: [:create, :destroy]
@@ -9,6 +11,4 @@ Rails.application.routes.draw do
   resources :talks, only: [:show]
 
   resources :team_users, only: [:create, :destroy]
-
-  devise_for :users
 end

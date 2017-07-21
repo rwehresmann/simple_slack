@@ -1,26 +1,24 @@
-<div class="center row no_team">
-  <% if current_user.my_teams.present? %>
-    <h5>Your Teams</h5>
-    <div class="row">
-      <ul class="collection col m4 offset-m4 s10 offset-s1">
-        <% current_user.my_teams.each do |t| %>
-          <li class="collection-item dismissable">
-            <div>
-              <%= t.slug %>
-              <a href="/<%= t.slug %>" class="secondary-content">
-                <i class="material-icons">call_made</i>
-              </a>
-            </div>
-          </li>
-        <% end %>
-      </ul>
+<%= render "teams/sidebar" %>
+<div class="row chat">
+  <div class="col m10 offset-m1 l10 offset-l2 s12">
+    <div class="row channel_name_box">
+      <p class="chat_name"></p>
     </div>
     <div class="row">
-      <a class="btn" href="#add_team_modal">New Team</a>
+      <div class="messages">
+        <!-- Here come the messages injected by coffee -->
+      </div>
     </div>
-  <% else %>
-    <h5>You have not created any teams yet</h5>
-    <h5>Create one now and empower your team!</h5>
-    <a class="btn" href="#add_team_modal">New Team</a>
-  <% end %>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea class="materialize-textarea new_message"></textarea>
+            <label for="icon_prefix2">Send a Message...</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
