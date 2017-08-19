@@ -30,6 +30,8 @@ end
 group :test do
   gem "factory_girl_rails"
   gem "ffaker"
+  gem 'poltergeist'
+  gem 'capybara', '~> 2.0'
 end
 
 group :development do
