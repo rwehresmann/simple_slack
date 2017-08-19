@@ -8,12 +8,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-controller="<%= controller_name.camelize %>" data-action="<%= action_name %>">
     <!-- navbar + sidebar -->
     <header>
       <%= render "shared/navbar" %>
       <%= render "shared/sidebar" %>
     </header>
+
+    <%= render "shared/display_flash_messages" %>
 
     <main>
       <div class="container">
