@@ -1,7 +1,8 @@
 FROM ruby:2.3-slim
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-      build-essential nodejs libpq-dev
+      build-essential nodejs libpq-dev nodejs-legacy libfontconfig1-dev npm
+RUN npm install -g phantomjs
 
 ENV INSTALL_PATH /simple_slack_chat
 
