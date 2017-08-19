@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'teams#index'
 
   resources :teams, only: [:create, :destroy]
-  get '/:slug', to: 'teams#show'
+  get '/:slug', to: 'teams#show', as: :team_chat
 
   resources :channels, only: [:show, :create, :destroy]
 
