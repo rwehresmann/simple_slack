@@ -10,7 +10,7 @@
             <%= hidden_field(:channel, :team_id, value: @team.id ) %>
             <%= text_field(:channel, :slug) %>
             <%= label_tag(:email, "Channel Name") %>
-            <%= submit_tag("Add Channel", class: "btn right") %>
+            <%= submit_tag("Add Channel", id: "create_channel_btn", class: "btn right") %>
           </div>
         </div>
       <% end %>
