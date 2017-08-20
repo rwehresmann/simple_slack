@@ -69,7 +69,7 @@
                               </a>
                               <% if can? :destroy, @team %>
                               <a class="right remove_user" id="<%= user.id %>" href="#" style="color: #ccc">
-                              <i class="material-icons" id="<%= user.id %>">settings</i>
+                              <i class="material-icons user_<%= user.id %>_settings" id="<%= user.id %>">settings</i>
                               </a>
                               <% end %>
                            </div>
