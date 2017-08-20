@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Delete a team", type: :feature, js: true do
-  it "shows an error message" do
+  it "redirects to root page" do
     user = create(:user)
     team = create(:team, user: user)
 
