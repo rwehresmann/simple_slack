@@ -9,7 +9,7 @@
           <div class="input-field col s12">
             <%= text_field(:team, :slug) %>
             <%= label_tag(:slug, "Team Name") %>
-            <%= submit_tag("New Team", class: "btn right") %>
+            <%= submit_tag("New Team", id: "create_team_btn", class: "btn right") %>
           </div>
         </div>
       <% end %>
